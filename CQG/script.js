@@ -178,6 +178,7 @@ function drawCircle(figure) {
 
 function drawEllipse(figure) {
 
+    // FIND POSITION ANR R1, R2
     var position = findCoordinates(figure);
     var ellipseCenterX = position[0];
     var ellipseCenterY = position[1];
@@ -202,7 +203,7 @@ function drawEllipse(figure) {
     if(checkDimensions(position)) {
             if (checkColor(strokeColorRGB)) {
                 if(checkColor(backgroundColorRGBA)) {
-                    // DRAW CIRCLE
+                    // DRAW ELLIPSE
                     contextGLobal.strokeStyle = `rgb(${strokeColorRed}, ${strokeColorGreen}, ${strokeColorBlue}`;
                     contextGLobal.fillStyle = `rgba(${backgroundColorRed}, ${backgroundColorGreen}, ${backgroundColorBlue}, ${backgroundAlpha})`;
                     contextGLobal.beginPath();
@@ -210,16 +211,13 @@ function drawEllipse(figure) {
                     contextGLobal.closePath();
                     contextGLobal.stroke();
                     contextGLobal.fill(); 
-                }else alert("Incorrect -b in <CIRCLE>");
-            }else alert("Incorrect -c in <CIRCLE>");
-    } else alert("Incorrect -p in <CIRCLE>");
+                }else alert("Incorrect -b in <ELLIPSE>");
+            }else alert("Incorrect -c in <ELLIPSE>");
+    } else alert("Incorrect -p in <ELLIPSE>");
                     
 
 
-    // alert("ELLIPSE");
-    // contextGLobal.beginPath();
-    // contextGLobal.ellipse(75, 75, 50, 25, 0 * Math.PI/180, 0, 2 * Math.PI);
-    // contextGLobal.stroke();
+    
 }
 
 function checkDimensions(position) {
