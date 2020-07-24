@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+canvas {
+    display: block;
+    margin: 50px auto;
+    border: 1px solid black;
+}
+
+.console textarea{
+    display: block;
+width: 600px;
+margin: 0px auto;
+}
+
+.button button{
+    display: block;
+    margin: 50px auto;
+}
